@@ -1,10 +1,9 @@
-import {Injectable} from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import * as path from 'path';
 import { promises as fs } from 'node:fs';
 
 @Injectable()
 export class StateService {
-
   private readonly statesDirPath = path.join(__dirname, '../../states');
 
   private getUserStateFilePath(userId: string): string {
